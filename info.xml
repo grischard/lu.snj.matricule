@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<extension key="lu.snj.matricule" type="module">
+  <file>matricule</file>
+  <name>Validation Matricule</name>
+  <description>Checks whether CiviCRM custom fields labeled 'Matricule' contain a valid Luxembourg national identity number.</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Guillaume Rischard</author>
+    <email>guillaume.rischard@snj.lu</email>
+  </maintainer>
+  <urls>
+    <url desc="Main Extension Page">https://github.com/grischard/lu.snj.matricule</url>
+    <url desc="Documentation">https://github.com/grischard/lu.snj.matricule</url>
+    <url desc="Support">https://github.com/grischard/lu.snj.matricule</url>
+    <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
+  </urls>
+  <releaseDate>2019-02-26</releaseDate>
+  <version>1.0</version>
+  <develStage>alpha</develStage>
+  <compatibility>
+    <ver>5.0</ver>
+  </compatibility>
+  <comments>This is a new, undeveloped module</comments>
+  <civix>
+    <namespace>CRM/Matricule</namespace>
+  </civix>
+</extension>

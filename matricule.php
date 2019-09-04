@@ -154,6 +154,15 @@ function matricule_civicrm_validateForm($formName, &$fields, &$files, &$form, &$
         }
         // find out custom field form identifier, like custom_2_1
         $matriculefieldid = 'custom_'.$matriculefield['id'].'_'.$matriculefield['custom_group_id'];
+      
+         if ( $formName == 'CRM_Contribute_Form_Contribution_Main') {
+             # Sometimes, field id is like custom_1
+             $matriculefieldid = 'custom_'.$matriculefield['id'];
+         } else{
+             $customRecId = $osm = CRM_Utils_Array::value( "customRecId", $fields, FALSE );
+             # And the rest of the time, field id is like custom_1_329. Go figure!
+             $matriculefieldid = 'custom_'.$matriculefield['id'].'_'.$customRecId;
+         }
         
         $matricule = CRM_Utils_Array::value( $matriculefieldid, $fields );
         
